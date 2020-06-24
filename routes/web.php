@@ -12,15 +12,31 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'ViguxSoft';
 });
 
 
 Route::middleware(['jwt.auth'])->group(function () {
     Route::get('getUsers', 'UsersController@getUsers')->name('getUsers');
+
+    //users
+    Route::post('createUsers', 'UsersController@createUsers')->name('createUsers');
+    Route::post('updateUsers', 'UsersController@updateUsers')->name('updateUsers');
+    Route::post('deleteUsers', 'UsersController@deleteUsers')->name('deleteUsers');
+
+    //Compras
+    Route::get('getCompras', 'CompraController@getCompras')->name('getCompras');
+    Route::post('addCompra', 'CompraController@addCompra')->name('addCompra');
+    Route::post('deleteCompras', 'CompraController@deleteCompra')->name('deleteCompras');
+
+    //Direccion
+    Route::get('getDireccion', 'DireccionController@getDireccion')->name('getDireccion');
+    Route::post('addDireccion', 'DireccionController@addDireccion')->name('addDireccion');
+    Route::post('updateDireccion', 'DireccionController@updateDireccion')->name('updateDireccion');
+    Route::post('deleteDireccion', 'DireccionController@deleteDireccion')->name('deleteDireccion');
+
 });
 
 Route::post('login', 'AuthenticateController@authenticate')->name('login');
-Route::post('createUsers', 'UsersController@createUsers')->name('createUsers');
-Route::post('updateUsers', 'UsersController@updateUsers')->name('updateUsers');
-Route::post('deleteUsers', 'UsersController@deleteUsers')->name('deleteUsers');
+
+
