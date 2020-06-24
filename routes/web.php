@@ -17,9 +17,9 @@ Route::get('/', function () {
 
 
 Route::middleware(['jwt.auth'])->group(function () {
-    Route::get('getUsers', 'UsersController@getUsers')->name('getUsers');
 
     //users
+    Route::get('getUsers', 'UsersController@getUsers')->name('getUsers');
     Route::post('createUsers', 'UsersController@createUsers')->name('createUsers');
     Route::post('updateUsers', 'UsersController@updateUsers')->name('updateUsers');
     Route::post('deleteUsers', 'UsersController@deleteUsers')->name('deleteUsers');
@@ -46,6 +46,12 @@ Route::middleware(['jwt.auth'])->group(function () {
     Route::post('addPrecio', 'PrecioController@addPrecio')->name('addPrecio');
     Route::post('updatePrecio', 'PrecioController@updatePrecio')->name('updatePrecio');
     Route::post('deletePrecio', 'PrecioController@deletePrecio')->name('deletePrecio');
+
+    //Promocion
+    Route::get('getPromociones', 'PromocionController@getPromociones')->name('getPromociones');
+    Route::post('addPromociones', 'PromocionController@addPromociones')->name('addPromociones');
+    Route::post('updatePromociones', 'PromocionController@updatePromociones')->name('updatePromociones');
+    Route::post('deletePromociones', 'PromocionController@deletePromociones')->name('deletePromociones');
 
 });
 
