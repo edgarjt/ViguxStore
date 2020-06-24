@@ -15,7 +15,7 @@ class CreateCarritoTable extends Migration
     {
         Schema::create('carrito', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('catidad');
+            $table->integer('cantidad');
             $table->decimal('sub_total');
             $table->integer('fk_user')->unsigned();
             $table->integer('fk_clave_producto');

@@ -16,9 +16,8 @@ class CreatePrecioTable extends Migration
         Schema::create('precio', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('aumento_porcentaje');
-            $table->dateTime('fecha_hora');
             $table->integer('fk_user')->unsigned();
-            $table->string('fk_clave_producto');
+            $table->integer('fk_clave_producto');
             $table->foreign('fk_user')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
