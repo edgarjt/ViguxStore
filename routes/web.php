@@ -35,6 +35,12 @@ Route::middleware(['jwt.auth'])->group(function () {
     Route::post('updateDireccion', 'DireccionController@updateDireccion')->name('updateDireccion');
     Route::post('deleteDireccion', 'DireccionController@deleteDireccion')->name('deleteDireccion');
 
+    //Carrito
+    Route::get('getCarrito', 'CarritoController@getCarrito')->name('getCarrito');
+    Route::post('addCarrito', 'CarritoController@addCarrito')->name('addCarrito');
+    Route::post('updateCarrito', 'CarritoController@updateCarrito')->name('updateCarrito');
+    Route::post('deleteCarrito', 'CarritoController@deleteCarrito')->name('deleteCarrito');
+
 });
 
 Route::post('login', 'AuthenticateController@authenticate')->name('login');
