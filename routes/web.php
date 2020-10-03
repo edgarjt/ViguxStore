@@ -15,9 +15,6 @@ Route::get('/', function () {
     return 'ViguxSoft';
 });
 
-
-Route::middleware(['jwt.auth'])->group(function () {
-
     //users
     Route::get('getUsers', 'UsersController@getUsers')->name('getUsers');
     Route::post('createUsers', 'UsersController@createUsers')->name('createUsers');
@@ -53,7 +50,6 @@ Route::middleware(['jwt.auth'])->group(function () {
     Route::post('updatePromociones', 'PromocionController@updatePromociones')->name('updatePromociones');
     Route::post('deletePromociones', 'PromocionController@deletePromociones')->name('deletePromociones');
 
-});
 
 Route::post('login', 'AuthenticateController@authenticate')->name('login');
 
