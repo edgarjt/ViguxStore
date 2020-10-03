@@ -12,10 +12,10 @@ class PrecioSeeder extends Seeder
     public function run()
     {
         $data = array(
-            ['aumento_porcentaje' => 10, 'fk_user' => 1, 'fk_clave_producto' => 1],
-            ['aumento_porcentaje' => 20, 'fk_user' => 1, 'fk_clave_producto' => 4],
-            ['aumento_porcentaje' => 5, 'fk_user' => 1, 'fk_clave_producto' => 2],
-            ['aumento_porcentaje' => 6, 'fk_user' => 1, 'fk_clave_producto' => 5],
+            ['pre_porcentaje' => 10, 'fk_user' => 1, 'fk_clave_producto' => 1],
+            ['pre_porcentaje' => 20, 'fk_user' => 1, 'fk_clave_producto' => 4],
+            ['pre_porcentaje' => 5, 'fk_user' => 1, 'fk_clave_producto' => 2],
+            ['pre_porcentaje' => 6, 'fk_user' => 1, 'fk_clave_producto' => 5],
         );
 
         //No verfica las llaves foraneas

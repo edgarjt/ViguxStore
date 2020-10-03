@@ -12,10 +12,10 @@ class PromocionSeeder extends Seeder
     public function run()
     {
         $data = array(
-            ['aumento_porcentaje' => 5, 'fk_user' => 1, 'fk_clave_producto' => 1],
-            ['aumento_porcentaje' => 5, 'fk_user' => 1, 'fk_clave_producto' => 2],
-            ['aumento_porcentaje' => 5, 'fk_user' => 1, 'fk_clave_producto' => 3],
-            ['aumento_porcentaje' => 6, 'fk_user' => 1, 'fk_clave_producto' => 4],
+            ['pro_porcentaje' => 5, 'fk_user' => 1, 'fk_clave_producto' => 1],
+            ['pro_porcentaje' => 5, 'fk_user' => 1, 'fk_clave_producto' => 2],
+            ['pro_porcentaje' => 5, 'fk_user' => 1, 'fk_clave_producto' => 3],
+            ['pro_porcentaje' => 6, 'fk_user' => 1, 'fk_clave_producto' => 4],
         );
 
         //No verfica las llaves foraneas

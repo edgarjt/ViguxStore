@@ -14,9 +14,9 @@ class CreateComprasTable extends Migration
     public function up()
     {
         Schema::create('compras', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('cantidad');
-            $table->decimal('sub_total');
+            $table->increments('com_id');
+            $table->integer('com_cantidad');
+            $table->decimal('com_subTotal');
             $table->integer('fk_user')->unsigned();
             $table->integer('fk_clave_producto');
             $table->foreign('fk_user')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');

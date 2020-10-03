@@ -12,11 +12,11 @@ class DireccionSeeder extends Seeder
     public function run()
     {
         $data = array(
-            ['estado' => 'Tabasco', 'municipio' => 'Centro', 'codigo_postal' => '86126', 'colonia' => 'Buenavista', 'calle' => 'Azucena', 'numero_exterior' => '5', 'numero_interior' => '19', 'referencia' => 'Parque', 'fk_user' => 2],
-            ['estado' => 'Monterrey', 'municipio' => 'Nuevo leon', 'codigo_postal' => '68945', 'colonia' => 'Apodaca', 'calle' => 'Lerdo', 'numero_exterior' => 'S/N', 'numero_interior' => 'S/N', 'referencia' => 'Escuela', 'fk_user' => 3],
-            ['estado' => 'Ciudad de mexico', 'municipio' => 'Nezahualcóyotl', 'codigo_postal' => '24574', 'colonia' => 'Juarez', 'calle' => 'Constitucion', 'numero_exterior' => '6', 'numero_interior' => '3', 'referencia' => 'Purirficadora', 'fk_user' => 5],
-            ['estado' => 'Guadalajara', 'municipio' => 'Jalisco', 'codigo_postal' => '86126', 'colonia' => 'Zapopan', 'calle' => 'Niños heroes', 'numero_exterior' => 'S/N', 'numero_interior' => 'S/N', 'referencia' => 'Farmacia', 'fk_user' => 8],
-            ['estado' => 'Guerrero', 'municipio' => 'Acatepec', 'codigo_postal' => '35795', 'colonia' => 'Arista', 'calle' => 'Obraje', 'numero_exterior' => '65', 'numero_interior' => '43', 'referencia' => 'Casa color blanco', 'fk_user' => 4],
+            ['dir_estado' => 'Tabasco', 'dir_municipio' => 'Centro', 'dir_codPostal' => '86126', 'dir_colonia' => 'Buenavista', 'dir_calle' => 'Azucena', 'dir_numExterior' => '5', 'dir_numInterior' => '19', 'dir_referencia' => 'Parque', 'fk_user' => 2],
+            ['dir_estado' => 'Monterrey', 'dir_municipio' => 'Nuevo leon', 'dir_codPostal' => '68945', 'dir_colonia' => 'Apodaca', 'dir_calle' => 'Lerdo', 'dir_numExterior' => 'S/N', 'dir_numInterior' => 'S/N', 'dir_referencia' => 'Escuela', 'fk_user' => 3],
+            ['dir_estado' => 'Ciudad de mexico', 'dir_municipio' => 'Nezahualcóyotl', 'dir_codPostal' => '24574', 'dir_colonia' => 'Juarez', 'dir_calle' => 'Constitucion', 'dir_numExterior' => '6', 'dir_numInterior' => '3', 'dir_referencia' => 'Purirficadora', 'fk_user' => 5],
+            ['dir_estado' => 'Guadalajara', 'dir_municipio' => 'Jalisco', 'dir_codPostal' => '86126', 'dir_colonia' => 'Zapopan', 'dir_calle' => 'Niños heroes', 'dir_numExterior' => 'S/N', 'dir_numInterior' => 'S/N', 'dir_referencia' => 'Farmacia', 'fk_user' => 8],
+            ['dir_estado' => 'Guerrero', 'dir_municipio' => 'Acatepec', 'dir_codPostal' => '35795', 'dir_colonia' => 'Arista', 'dir_calle' => 'Obraje', 'dir_numExterior' => '65', 'dir_numInterior' => '43', 'dir_referencia' => 'Casa color blanco', 'fk_user' => 4],
         );
 
         //No verfica las llaves foraneas

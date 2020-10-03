@@ -14,15 +14,15 @@ class CreateDireccionTable extends Migration
     public function up()
     {
         Schema::create('direccion', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('estado');
-            $table->string('municipio');
-            $table->integer('codigo_postal');
-            $table->string('colonia');
-            $table->string('calle');
-            $table->string('numero_exterior');
-            $table->string('numero_interior');
-            $table->text('referencia');
+            $table->increments('dir_id');
+            $table->string('dir_estado');
+            $table->string('dir_municipio');
+            $table->integer('dir_codPostal');
+            $table->string('dir_colonia');
+            $table->string('dir_calle');
+            $table->string('dir_numExterior');
+            $table->string('dir_numInterior');
+            $table->text('dir_referencia');
             $table->integer('fk_user')->unsigned();
             $table->foreign('fk_user')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();

@@ -27,18 +27,5 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    //uno a muchos
-    public function compra() {
-        return $this->hasMany('App\Compra');
-    }
-
-    public function favorito() {
-        return $this->hasMany('App\Favorito');
-    }
-
-    public function direccion() {
-        return $this->hasMany('App\Direccion');
-    }
-
 
 }

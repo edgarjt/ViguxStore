@@ -14,8 +14,8 @@ class CreatePrecioTable extends Migration
     public function up()
     {
         Schema::create('precio', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('aumento_porcentaje');
+            $table->increments('pre_id');
+            $table->integer('pre_porcentaje');
             $table->integer('fk_user')->unsigned();
             $table->integer('fk_clave_producto');
             $table->foreign('fk_user')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');

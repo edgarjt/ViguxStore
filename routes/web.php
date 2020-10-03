@@ -50,7 +50,7 @@ Route::get('/', function () {
     Route::post('updatePromociones', 'PromocionController@updatePromociones')->name('updatePromociones');
     Route::post('deletePromociones', 'PromocionController@deletePromociones')->name('deletePromociones');
 
-
-Route::post('login', 'AuthenticateController@authenticate')->name('login');
+    //Auth
+    Route::post('login', 'AuthenticateController@authenticate')->name('login');
 
 
