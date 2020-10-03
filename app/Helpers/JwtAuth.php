@@ -56,10 +56,35 @@ class JwtAuth {
         } else {
             $data = [
                 'status' => false,
-                'message' => 'Credenciales incorrecto'
+                'message' => 'Credenciales incorrectas'
             ];
         }
 
         return $data;
+    }
+
+    public function checkToken($jwt, $getIdentity = false) {
+        $auth = false;
+
+        try {
+            $replace_jwt = str_replace('"', '', $jwt);
+            $decoded = JWT::decode($replace_jwt, $this->key, ['HS256']);
+        }catch (\UnexpectedValueException $e) {
+            $auth = false;
+        }catch (\DomainException $e) {
+            $auth = false;
+        }
+
+        if (!empty($decoded) && is_object($decoded) && isset($decoded->sub)) {
+            $auth = true;
+        }else {
+            $auth = false;
+        }
+
+        if ($getIdentity) {
+            return $decoded;
+        }
+
+        return $auth;
     }
 }
